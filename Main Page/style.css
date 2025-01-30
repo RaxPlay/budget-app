@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+.container{
+    margin-top: 40px;
+    width: 450px;
+    height: 600px;
+    border: none;
+    background-color: rgb(14, 4, 66);
+    color: white;
+    border-radius: 25px;
+}
+.expenses{
+    display: flex;
+    justify-content: center;
+    width: 450px;
+}
+.total-balance{
+    margin-top: 40px;
+    font-size: 36px;
+}
+.expenses input, .editing-input{
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: rgb(6, 1, 31);
+    color: white;
+    width: 50%;
+}
+.editing-input{
+    width: 40%;
+}
+button{
+    margin-left: 20px;
+    height: 32px;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.1rem;
+    background-color: rgb(251, 251, 251);
+    color: rgb(0, 0, 0);
+    
+    transition: 0.25s;
+}
+button:hover{
+    background-color: rgb(162, 162, 162);
+    border-radius: 5px;
+}
+.new-expense-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+}
+.new-expense-div .expense-text{
+    font-size: 1.2rem;
+    padding: 3px;
+    background-color: rgb(6, 1, 31);
+    border: none;
+    border-radius: 5px;
+    width: 15%;
+    position: relative;
+    left: 10px;
+}
+.newExpense-moved{
+    transform: translateX(100px);
+    transition: 0.5s;
+}
+.new-expense-div .expenseLabel{
+    font-size: 1.2rem;
+    padding: 4px;
+    background-color: rgb(6, 1, 31);
+    border: none;
+    border-radius: 5px;
+    width: 15%;
+}
+.new-expense-div .expense{
+    background-color: rgb(6, 1, 31);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 1.2rem;
+    width: 25%;
+}
+.new-expense-div .submit-cost{
+    margin-right: 10px;
+}
+.total-balance, .expenses, .display-expenses{
+    text-align: center;
+}
+.expenses{
+    margin-top: 15px;
+}
+.Edit-Button{
+    position: relative;
+    left: -5px;
+}
+.FinalExpenseValue{
+    background-color: rgb(6, 1, 31);
+    border-radius: 5px;
+    position: relative;
+    left: -20px;
+    padding: 5px;
+    font-size: 1.2rem;
+
+    animation: final-expense-animation 0.5s;
+    transform: translateX(-100px);
+}
+@keyframes final-expense-animation {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-100px);
+    }
+}
