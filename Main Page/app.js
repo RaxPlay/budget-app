@@ -1,9 +1,7 @@
 const addBtn = document.querySelector('.add-expenses');
 const displayExpenses = document.querySelector('.display-expenses')
-let totalBalance = 3000;
+let totalBalance = `3000$`;
 const addExpense = document.querySelector('.add-expense-text');
-
-
 
 addBtn.addEventListener('click', function(){
     const expenseDiv = document.createElement('div')
@@ -34,10 +32,15 @@ addBtn.addEventListener('click', function(){
         expensePricelabel.remove()
 
         newExpense.classList.add('newExpense-moved')
+        
         const FinalExpenseCost = document.createElement('p')
         FinalExpenseCost.innerText = `${expenseCost.value}$`
         FinalExpenseCost.classList.add('FinalExpenseValue')
 
         expenseDiv.append(FinalExpenseCost)
+
+        if(FinalExpenseCost >= `3000$`){
+            alert('you overspent!!')
+        }
     })
 })

@@ -5,6 +5,7 @@ body{
     justify-content: center;
     font-family: 'Inter', sans-serif;
     text-align: center;
+    background-color: black;
 }
 .container{
     margin-top: 40px;
